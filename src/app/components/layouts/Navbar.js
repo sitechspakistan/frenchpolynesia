@@ -159,12 +159,21 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex flex-col">
           <Link href="/" className="flex flex-col no-underline">
-            <Image
-              src="/assets/images/logo-trans.png"
-              alt="French Polynesia Logo"
-              width={180}
-              height={50}
-            />
+            {scrolled ? (
+              <Image
+                src="/assets/images/logo-trans.png"
+                alt="French Polynesia Logo"
+                width={120}
+                height={50}
+              />
+            ) : (
+              <Image
+                src="/assets/images/logo-trans.png"
+                alt="French Polynesia Logo"
+                width={200}
+                height={50}
+              />
+            )}
           </Link>
         </div>
 
@@ -177,7 +186,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="#"
+            href="/destination"
             className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
           >
             Destinations
@@ -201,7 +210,7 @@ const Navbar = () => {
             Blog
           </Link>
           <Link
-            href="#"
+            href="/contact"
             className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
           >
             Contact Us

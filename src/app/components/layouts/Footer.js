@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const links = [
+  { label: "Destinations", href: "/destination" },
+  { label: "Packages", href: "/packages" },
+  { label: "About Us", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-(--section-bg) ">
@@ -112,19 +120,13 @@ export default function Footer() {
               Our Links
             </h4>
             <ul className="flex flex-col gap-4">
-              {[
-                "Destinations",
-                "Packages",
-                "About Us",
-                "Blog",
-                "Contact Us",
-              ].map((item) => (
+              {links.map((item) => (
                 <li key={item}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="text-gray-600 hover:text-pink-500 transition-colors text-sm"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}

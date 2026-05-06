@@ -12,3 +12,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.react-player__preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: background 0.3s ease;
+}
+
+.react-player__preview:hover::after {
+  background: rgba(0, 0, 0, 0.2); /* 👈 hover par dark overlay */
+}
