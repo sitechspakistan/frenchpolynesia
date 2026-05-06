@@ -1,0 +1,60 @@
+import React from "react";
+import DestinationCard from "../ui/DestinationCard";
+
+const posts = [
+  {
+    id: 1,
+    imageSrc: "/blog/blog-1.png",
+    category: "The Icon Of Luxury",
+    date: "15 Mar, 2026",
+    title: "10 Places In BORA That Will Make You Fall In Love",
+    // href: "bulletin/detail",
+  },
+  {
+    id: 2,
+    imageSrc: "/blog/blog-2.png",
+    category: "The Cultural Heart",
+
+    date: "1 Feb, 2026",
+    title: "Dicover Magic of TAHITI ",
+    // href: "bulletin/detail",
+  },
+  {
+    id: 3,
+    imageSrc: "/blog/blog-3.png",
+    category: "Adventure Meets Beauty",
+    date: "12 Jan, 2026",
+    title: "Top MOOREA The Adventure Place",
+    // href: "/bulletin/detail",
+  },
+];
+
+const BlogSec = ({ color = false, heading }) => {
+  return (
+    <section
+      className={`py-16 ${color ? "bg-[var(--section-bg)]" : "bg-white"}`}
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        {heading && (
+          <h2 className="text-5xl font-bold mb-10 text-center uppercase">
+            {heading}
+          </h2>
+        )}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {posts.map((post) => (
+            <DestinationCard
+              key={post.id}
+              imageSrc={post.imageSrc}
+              category={post.category}
+              date={post.date}
+              title={post.title}
+              href={post.href}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BlogSec;
