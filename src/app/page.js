@@ -5,6 +5,11 @@ import BlogSec from "./components/sections/Blog";
 import PromoSec from "./components/sections/PromoSec";
 import CTASec from "./components/sections/CTASec";
 
+export const metadata = {
+  title: "French Polynesia",
+  // description: "...",
+};
+
 export default function Home() {
   return (
     <>

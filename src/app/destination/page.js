@@ -45,6 +45,10 @@ const destinations = [
     imagePosition: "left",
   },
 ];
+export const metadata = {
+  title: "Destinations | French Polynesia",
+  // description: "...",
+};
 const destinationPage = () => {
   return (
     <>

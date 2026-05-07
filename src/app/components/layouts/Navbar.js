@@ -1,9 +1,3 @@
-// "use client";
-
-// import React, { useState } from "react";
-// import Link from "next/link";
-// import Image from "next/image";
-
 // const Navbar = () => {
 //   // const [menuOpen, setMenuOpen] = useState(false);
 //   return (
@@ -128,7 +122,6 @@
 //   );
 // };
 
-// export default Navbar;
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -152,28 +145,22 @@ const Navbar = () => {
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white shadow-sm"
-          : "bg-gradient-to-b from-white/100 to-transparent"
+          : "bg-gradient-to-b from-white via-white/80 to-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center py-4 justify-between px-4 ">
+      <div className="max-w-7xl mx-auto flex items-center py-4 justify-between px-6 ">
         {/* Logo */}
         <div className="flex flex-col">
           <Link href="/" className="flex flex-col no-underline">
-            {scrolled ? (
-              <Image
-                src="/assets/images/logo-trans.png"
-                alt="French Polynesia Logo"
-                width={120}
-                height={50}
-              />
-            ) : (
-              <Image
-                src="/assets/images/logo-trans.png"
-                alt="French Polynesia Logo"
-                width={200}
-                height={50}
-              />
-            )}
+            <Image
+              src="/assets/images/logo-trans.png"
+              alt="French Polynesia Logo"
+              width={200}
+              height={50}
+              className={`transition-all duration-500 ease-in-out ${
+                scrolled ? "w-[120px]" : "w-[200px]"
+              }`}
+            />
           </Link>
         </div>
 
@@ -192,7 +179,7 @@ const Navbar = () => {
             Destinations
           </Link>
           <Link
-            href="#"
+            href="/packages"
             className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
           >
             Packages
@@ -204,8 +191,9 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            href="/blog"
+            href="https://thechicatravelista.com/"
             className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
+            target="blank"
           >
             Blog
           </Link>
