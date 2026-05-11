@@ -4,7 +4,7 @@ import DestinationCard from "../ui/DestinationCard";
 const posts = [
   {
     id: 1,
-    imageSrc: "/tahiti/dest-1.jpg",
+    imageSrc: "/assets/images/tahiti/dest-1.jpg",
     category: "The Icon Of Luxury",
     date: "15 Mar, 2026",
     title: "BORA BORA",
@@ -12,7 +12,7 @@ const posts = [
   },
   {
     id: 2,
-    imageSrc: "/tahiti/dest-2.jpg",
+    imageSrc: "/assets/images/tahiti/dest-2.jpg",
     category: "The Cultural Heart",
 
     date: "1 Feb, 2026",
@@ -21,7 +21,7 @@ const posts = [
   },
   {
     id: 3,
-    imageSrc: "/tahiti/dest-3.jpg",
+    imageSrc: "/assets/images/tahiti/dest-3.jpg",
     category: "Adventure Meets Beauty",
     date: "12 Jan, 2026",
     title: "MOOREA",

@@ -4,7 +4,7 @@ import DestinationCard from "../ui/DestinationCard";
 const posts = [
   {
     id: 1,
-    imageSrc: "/blog/blog-1.png",
+    imageSrc: "/assets/images/blog/blog-1.png",
     category: "The Icon Of Luxury",
     date: "15 Mar, 2026",
     title: "10 Places In BORA That Will Make You Fall In Love",
@@ -12,7 +12,7 @@ const posts = [
   },
   {
     id: 2,
-    imageSrc: "/blog/blog-2.png",
+    imageSrc: "/assets/images/blog/blog-2.png",
     category: "The Cultural Heart",
 
     date: "1 Feb, 2026",
@@ -21,7 +21,7 @@ const posts = [
   },
   {
     id: 3,
-    imageSrc: "/blog/blog-3.png",
+    imageSrc: "/assets/images/blog/blog-3.png",
     category: "Adventure Meets Beauty",
     date: "12 Jan, 2026",
     title: "Top MOOREA The Adventure Place",

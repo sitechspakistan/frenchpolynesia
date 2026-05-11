@@ -11,12 +11,7 @@ export default function DestinationCard({
     <div className="bg-white flex flex-col p-3 rounded-2xl shadow">
       {/* Image */}
       <div className="w-full h-[340px] relative overflow-hidden rounded-xl">
-        <Image
-          src={`/assets/images${imageSrc}`}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+        <Image src={`${imageSrc}`} alt={title} fill className="object-cover" />
       </div>
 
       {/* Content */}
