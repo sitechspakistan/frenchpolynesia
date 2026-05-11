@@ -11,7 +11,7 @@ export default function DestinationCard({
     <div className="bg-white flex flex-col p-3 rounded-2xl shadow">
       {/* Image */}
       <div className="w-full h-[340px] relative overflow-hidden rounded-xl">
-        <Image src={`${imageSrc}`} alt={title} fill className="object-cover" />
+        <img src={`${imageSrc}`} alt={title} fill className="object-cover" />
       </div>
 
       {/* Content */}
@@ -26,11 +26,11 @@ export default function DestinationCard({
 
         {/* Button */}
         <div className="ml-3 flex-shrink-0">
-          <Image
+          <img
             src="/assets/icons/round-arrow-pink.svg"
             width={34}
             height={34}
-            alt="arrow"
+            alt={title}
           />
         </div>
       </div>
