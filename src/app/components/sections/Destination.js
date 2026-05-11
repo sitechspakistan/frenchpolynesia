@@ -4,7 +4,7 @@ import DestinationCard from "../ui/DestinationCard";
 const posts = [
   {
     id: 1,
-    imageSrc: "/assets/images/tahiti/dest-1.jpg",
+    imageSrc: "/assets/images/why/why-1.png",
     category: "The Icon Of Luxury",
     date: "15 Mar, 2026",
     title: "BORA BORA",
