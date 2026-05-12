@@ -102,13 +102,13 @@ const packages = [
 const PackageSec = () => {
   return (
     <section>
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {packages.slice(0, 3).map((pkg, i) => (
             <PackageCard key={i} {...pkg} />
           ))}
         </div>
-        <div className="flex justify-center gap-6 mt-6">
+        <div className="flex flex-col md:flex-row justify-center gap-6 mt-6">
           {packages.slice(3).map((pkg, i) => (
             <div key={i} className="w-full md:w-1/3">
               <PackageCard {...pkg} />

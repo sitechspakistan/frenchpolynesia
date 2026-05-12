@@ -13,8 +13,8 @@ export default function Footer() {
   return (
     <footer className="bg-(--section-bg) ">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Col 1: Logo + Description + Socials */}
           <div className="flex flex-col gap-6">
             <Link href="/">
@@ -144,7 +144,7 @@ export default function Footer() {
 
           {/* Col 2: Our Links */}
           <div className="md:text-left md:pl-16">
-            <h4 className="text-gray-900 font-bold text-lg uppercase mb-6 tracking-wide">
+            <h4 className="text-gray-900 font-bold text-lg uppercase mb-3 md:mb-6 tracking-wide">
               Our Links
             </h4>
             <ul className="flex flex-col gap-4">
@@ -164,7 +164,7 @@ export default function Footer() {
 
           {/* Col 3: Contact Us */}
           <div>
-            <h4 className="text-gray-900 font-bold text-lg uppercase mb-6 tracking-wide">
+            <h4 className="text-gray-900 font-bold text-lg uppercase mb-3 md:mb-6 tracking-wide">
               Contact Us
             </h4>
             <div className="flex flex-col gap-4">

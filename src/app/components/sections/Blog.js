@@ -32,11 +32,11 @@ const posts = [
 const BlogSec = ({ color = false, heading }) => {
   return (
     <section
-      className={`py-16 ${color ? "bg-[var(--section-bg)]" : "bg-white"}`}
+      className={`py-10 md:py-16 ${color ? "bg-[var(--section-bg)]" : "bg-white"}`}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {heading && (
-          <h2 className="text-5xl font-bold mb-10 text-center uppercase">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-10 text-center uppercase">
             {heading}
           </h2>
         )}

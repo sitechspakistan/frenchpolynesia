@@ -28,8 +28,8 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="w-[40%]">
-        <h2 className="text-5xl font-extrabold mb-10 uppercase">
+      <div className="w-full md:w-[40%]">
+        <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 uppercase">
           Get in Touch
         </h2>
         <form className=" flex flex-col gap-4 ">

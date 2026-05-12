@@ -4,7 +4,7 @@ import AboutSec from "../ui/AboutSec";
 
 const PromoSec = () => {
   return (
-    <section className="py-16">
+    <section className="py-10 md:py-16">
       <VideoSec />
       <AboutSec />
     </section>

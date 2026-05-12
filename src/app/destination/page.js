@@ -53,7 +53,7 @@ const destinationPage = () => {
   return (
     <>
       <HeroSecond heading={"Destination"} />
-      <section className="py-16 px-6">
+      <section className="py-10 md:py-16 px-4 md:px-6 ">
         {destinations.map((destination, index) => (
           <DestinationSecCard key={index} {...destination} />
         ))}

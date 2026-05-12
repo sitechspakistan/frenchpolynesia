@@ -8,10 +8,15 @@ export default function DestinationCard({
   href = "",
 }) {
   return (
-    <div className="bg-white flex flex-col p-3 rounded-2xl shadow">
+    <div className="bg-white flex flex-col p-3 rounded-2xl shadow justify-between">
       {/* Image */}
-      <div className="w-full h-[340px] relative overflow-hidden rounded-xl">
-        <img src={`${imageSrc}`} alt={title} fill className="object-cover" />
+      <div className="w-full h-[340px]">
+        <img
+          src={`${imageSrc}`}
+          alt={title}
+          // fill="true"
+          className="rounded-xl h-full w-full object-cover h-[340px]"
+        />
       </div>
 
       {/* Content */}

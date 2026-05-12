@@ -11,22 +11,22 @@ const VideoSec = () => {
   const YOUTUBE_URL = "https://www.youtube.com/watch?v=khSOkRQsjFM";
 
   return (
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="flex justify-between items-center">
-        <h2 className="w-1/2 text-5xl">
+    <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 text-center md:text-left">
+        <h2 className="w-full md:w-1/2 text-3xl md:text-5xl">
           See how we create trips travels
           <span className="text-pink-500"> that awaken dreams </span>
           bring the world closer
         </h2>
-        <p className="text-lg mr-8">
+        <p className="text-base md:text-lg md:mr-8">
           We don't just plan trips - we craft <br />
           experiences that stay with you
         </p>
       </div>
 
-      <div className="pt-15">
+      <div className="pt-10 md:pt-15">
         <div
-          className="relative rounded-[20px] overflow-hidden w-full h-[500px] cursor-pointer "
+          className="relative rounded-[20px] overflow-hidden w-full aspect-video md:aspect-auto md:h-[500px] cursor-pointer "
           onMouseEnter={() => setHovering(true)} // 👈
           onMouseLeave={() => setHovering(false)}
         >
@@ -55,6 +55,7 @@ const VideoSec = () => {
                 height="107"
                 viewBox="0 0 107 107"
                 fill="none"
+                className="w-[60px] h-[60px] md:w-[107px] md:h-[107px]"
                 style={{
                   transform: hovering ? "scale(1.15)" : "scale(1)",
                   transition: "transform 0.3s ease",

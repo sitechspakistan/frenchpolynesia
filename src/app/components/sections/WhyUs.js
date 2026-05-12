@@ -122,13 +122,17 @@ export default function WhyUs({
               detail, we design unforgettable journeys tailored to you.`,
 }) {
   return (
-    <section className="relative py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 flex items-center">
-        {/* LEFT: Text */}
-        <div className="w-1/2 pr-10">
-          <h2 className="text-5xl font-bold mb-6">Why Travelista Travels</h2>
-          <p className="text-base text-gray-700 mb-6">{paragraph}</p>
-          <div className="flex flex-col gap-7">
+    <section className="relative py-10 md:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
+        {/* LEFT: Text — full width on mobile, half on desktop */}
+        <div className="w-full md:w-1/2 md:pr-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+            Why Travelista Travels
+          </h2>
+          <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
+            {paragraph}
+          </p>
+          <div className="flex flex-col gap-5 md:gap-7">
             {features.map((f) => (
               <FeatureCard
                 key={f.title}
@@ -140,8 +144,7 @@ export default function WhyUs({
           </div>
         </div>
 
-        {/* RIGHT: Image Grid */}
-        <div className="w-1/2 shrink-0 h-[520px] flex gap-3">
+        <div className="hidden md:flex w-1/2 shrink-0 h-[520px] gap-3">
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-3 pt-10">
             <div className="flex-1 rounded-2xl overflow-hidden h-[270px]">

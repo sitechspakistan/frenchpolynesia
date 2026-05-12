@@ -11,10 +11,10 @@ export default function DestinationSecCard({
 }) {
   return (
     <div
-      className={`flex overflow-hidden bg-white max-w-7xl mx-auto mb-6 gap-5 ${imagePosition === "right" ? "flex-row-reverse" : "flex-row"} `}
+      className={`flex flex-col overflow-hidden bg-white max-w-7xl mx-auto gap-5 mb-10 last:mb-0  ${imagePosition === "right" ? "md:flex-row-reverse" : "md:flex-row"} `}
     >
       {/* Left: Image */}
-      <div className="w-[45%] flex-shrink-0 p-4 bg-(--section-bg) rounded-xl ">
+      <div className="w-full md:w-[45%] flex-shrink-0 p-4 bg-(--section-bg) rounded-xl ">
         <img
           src={image}
           alt={imageAlt}
@@ -24,9 +24,7 @@ export default function DestinationSecCard({
 
       {/* Right: Content */}
       <div
-        className={`w-[55%]  flex flex-col justify-center py-12 gap-10 
- 
-`}
+        className={`w-full md:w-[55%] flex flex-col justify-center py-0 md:py-12 gap-4 md:gap-10`}
       >
         {/* Tagline */}
         <div>
@@ -45,7 +43,7 @@ export default function DestinationSecCard({
 
         {/* Things To Do */}
         <div>
-          <h3 className="text-xl font-black text-gray-900 tracking-widest uppercase mb-1">
+          <h3 className="text-xl font-black text-gray-900 tracking-widest uppercase mb-2">
             Things To Do
           </h3>
           <div className="flex flex-wrap gap-4">

@@ -130,15 +130,28 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/destination", label: "Destinations" },
+    { href: "/packages", label: "Packages" },
+    { href: "/about", label: "About Us" },
+    {
+      href: "https://thechicatravelista.com/",
+      label: "Blog",
+      target: "_blank",
+    },
+    { href: "/contact", label: "Contact Us" },
+  ];
 
   return (
     <nav
@@ -148,63 +161,75 @@ const Navbar = () => {
           : "bg-gradient-to-b from-white via-white/80 to-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center py-4 justify-between px-6 ">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:py-4 md:px-6">
         {/* Logo */}
-        <div className="flex flex-col">
-          <Link href="/" className="flex flex-col no-underline">
-            <Image
-              src="/assets/images/logo-trans.png"
-              alt="French Polynesia Logo"
-              width={200}
-              height={50}
-              className={`transition-all duration-500 ease-in-out ${
-                scrolled ? "w-[120px]" : "w-[200px]"
-              }`}
-            />
-          </Link>
+        <Link href="/" className="flex flex-col no-underline">
+          <Image
+            src="/assets/images/logo-trans.png"
+            alt="French Polynesia Logo"
+            width={200}
+            height={50}
+            className={`transition-all duration-500 ease-in-out ${
+              scrolled ? "w-[120px]" : "w-[200px]"
+            }`}
+          />
+        </Link>
+
+        {/* Desktop Nav Links — hidden on mobile */}
+        <div className="hidden md:flex items-center gap-7">
+          {navLinks.map(({ href, label, target }) => (
+            <Link
+              key={href}
+              href={href}
+              target={target}
+              className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
-        {/* Nav Links */}
-        <div className="md:flex items-center gap-7 flex-1 justify-end">
-          <Link
-            href="/"
-            className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/destination"
-            className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
-          >
-            Destinations
-          </Link>
-          <Link
-            href="/packages"
-            className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
-          >
-            Packages
-          </Link>
-          <Link
-            href="/about"
-            className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
-          >
-            About Us
-          </Link>
-          <Link
-            href="https://thechicatravelista.com/"
-            className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
-            target="blank"
-          >
-            Blog
-          </Link>
-          <Link
-            href="/contact"
-            className="text-(--nav-btn-clr) text-md tracking-wide hover:text-black transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
+        {/* Hamburger Button — visible only on mobile */}
+        <button
+          className="md:hidden flex flex-col gap-1.5 p-1"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+          ></span>
+          <span
+            className={`block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+          ></span>
+          <span
+            className={`block w-6 h-0.5 bg-gray-800 rounded transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+          ></span>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden flex flex-col px-8 py-6 gap-4 bg-white shadow-lg">
+          {navLinks.map(({ href, label, target }) => (
+            <Link
+              key={href}
+              href={href}
+              target={target}
+              className="text-gray-700 text-base border-b border-gray-100 pb-3 hover:text-black transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+          {/* <Link
+            href="/book"
+            className="bg-gray-900 text-white text-sm tracking-widest text-center py-3 rounded-sm hover:bg-gray-700 transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            BOOK NOW
+          </Link> */}
+        </div>
+      )}
     </nav>
   );
 };

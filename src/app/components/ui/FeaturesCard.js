@@ -151,7 +151,7 @@ const FeatureCards = () => {
         {features.map((f, i) => (
           <div
             key={i}
-            className={`flex flex-col items-center text-center p-12 bg-blue-50 rounded-lg`}
+            className={`flex flex-col items-center text-center p-10 md:p-12 bg-blue-50 rounded-lg`}
           >
             <div className="mb-6 h-12 flex items-center justify-center">
               {f.icon}

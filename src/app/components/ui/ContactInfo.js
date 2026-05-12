@@ -2,26 +2,26 @@ import React from "react";
 
 const ContactInfo = () => {
   return (
-    <div className="w-[60%]">
-      <p className="text-base mb-10">
+    <div className="w-full md:w-[60%]">
+      <p className="text-base mb-4 md:mb-10">
         Please reach out to our Customer Care team with any questions you may
         have. To learn more about Supplements, refer to our FAQs page below.
       </p>
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-5">
         <div className="flex-1">
-          <h3 className="text-2xl font-bold mb-5">
+          <h3 className="text-2xl font-bold mb-2 md:mb-5">
             Address <br /> Business
           </h3>
           <p>4314 Stanley St Pittsburgh, Pennsylvania 15207</p>
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold mb-5">
+          <h3 className="text-2xl font-bold mb-2 md:mb-5">
             Contact <br /> With Us
           </h3>
           <p>+412-458-9665</p>
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold mb-5">
+          <h3 className="text-2xl font-bold mb-2 md:mb-5">
             Our <br /> Email
           </h3>
           <p>frenchpolynesia@email.com</p>
@@ -35,7 +35,10 @@ const ContactInfo = () => {
           "Qualified Consultants",
           "Orientation for Business",
         ].map((item, i) => (
-          <div key={i} className="flex items-center justify-start gap-3">
+          <div
+            key={i}
+            className="flex items-center justify-start gap-2 md:gap-3"
+          >
             <svg
               width="20"
               height="20"
@@ -49,7 +52,9 @@ const ContactInfo = () => {
               />
             </svg>
 
-            <span className="text-gray-800 font-medium">{item}</span>
+            <span className="text-sm md:text-base text-gray-800 font-normal md:font-medium">
+              {item}
+            </span>
           </div>
         ))}
       </div>
