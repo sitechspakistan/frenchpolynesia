@@ -145,9 +145,9 @@ export default function Footer() {
           {/* Col 2: Our Links */}
           <div className="md:text-left md:pl-16">
             <h4 className="text-gray-900 font-bold text-lg uppercase mb-3 md:mb-6 tracking-wide">
-              Our Links
+              Quick Links
             </h4>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-2">
               {links.map((item, index) => (
                 <li key={index}>
                   <Link

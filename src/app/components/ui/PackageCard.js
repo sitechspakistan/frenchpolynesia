@@ -57,7 +57,7 @@ const PackageCard = ({
 
           {/* Footer & Button */}
           <div className="border-t border-(--section-bg)">
-            <p className="text-gray-400 text-sm my-3">
+            <p className="text-gray-400 text-sm my-3 text-center">
               {nights} nights · {footerNote}
             </p>
           </div>

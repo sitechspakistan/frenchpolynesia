@@ -33,7 +33,9 @@ export default function DestinationSecCard({
           </p>
 
           {/* Destination Name */}
-          <h2 className="text-4xl font-black text-gray-900 mb-3">{name}</h2>
+          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-2 md:mb-3">
+            {name}
+          </h2>
 
           {/* Description */}
           <p className="text-gray-600 text-base leading-relaxed ">
@@ -43,14 +45,14 @@ export default function DestinationSecCard({
 
         {/* Things To Do */}
         <div>
-          <h3 className="text-xl font-black text-gray-900 tracking-widest uppercase mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 tracking-widest uppercase mb-2">
             Things To Do
           </h3>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-2 md:gap-4">
             {activities.map((activity, index) => (
               <span
                 key={index}
-                className="border border-pink-500 text-pink-500 text-sm font-bold tracking-widest px-4 py-2 rounded-sm uppercase"
+                className="border border-pink-500 text-pink-500 text-[11px] font-bold tracking-widest px-3 md:px-4 py-1 md:py-2 rounded-sm uppercase"
               >
                 {activity}
               </span>
@@ -60,7 +62,7 @@ export default function DestinationSecCard({
 
         {/* Best Time To Visit */}
         <div className="flex flex-col">
-          <h3 className="text-xl font-black text-gray-900 tracking-widest uppercase mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 tracking-widest uppercase mb-1 md:mb-2">
             Best Time To Visit
           </h3>
           <p className="text-gray-600 text-base leading-relaxed">{bestTime}</p>
@@ -68,7 +70,7 @@ export default function DestinationSecCard({
 
         {/* Perfect For */}
         <div className="flex flex-col">
-          <h3 className="text-xl  font-black text-gray-900 tracking-widest uppercase mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 tracking-widest uppercase mb-1 md:mb-2">
             Perfect For
           </h3>
           <p className="text-gray-600 text-base leading-relaxed">

@@ -3,7 +3,7 @@ import React from "react";
 const HeroSecond = ({ heading }) => {
   return (
     <section
-      className="relative flex items-end  bg-cover bg-center h-[450px]"
+      className="relative flex items-end  bg-cover bg-center  h-[350px] md:h-[450px]"
       style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
     >
       {/* Glass effect bottom bar */}

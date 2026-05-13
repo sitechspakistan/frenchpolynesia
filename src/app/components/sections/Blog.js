@@ -36,7 +36,7 @@ const BlogSec = ({ color = false, heading }) => {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {heading && (
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-10 text-center uppercase">
+          <h2 className="text-2xl md:text-5xl font-bold mb-6 md:mb-10 text-center uppercase">
             {heading}
           </h2>
         )}

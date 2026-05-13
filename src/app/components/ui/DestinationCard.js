@@ -24,7 +24,7 @@ export default function DestinationCard({
         {/* Category & Date */}
         <div>
           <p className="text-sm text-gray-400">{date}</p>
-          <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide">
+          <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide line-clamp-2">
             {title}
           </h3>
         </div>
