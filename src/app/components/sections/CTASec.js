@@ -14,7 +14,7 @@ const CTASec = () => {
             We are dedicated to making your journey of discovery truly
             unforgettable. Our team of passionate travel
           </p>
-          <Button href="/#">Send us a Message</Button>
+          <Button href="/contact">Send us a Message</Button>
         </div>
       </section>
     </>

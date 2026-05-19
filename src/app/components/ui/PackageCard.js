@@ -61,7 +61,9 @@ const PackageCard = ({
               {nights} nights · {footerNote}
             </p>
           </div>
-          <Button className="w-[70%] self-center">Book Package</Button>
+          <Button className="w-[70%] self-center" href="/contact">
+            Book Package
+          </Button>
         </div>
       </div>
     </>

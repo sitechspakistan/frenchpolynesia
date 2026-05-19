@@ -6,7 +6,7 @@ import ContactInfo from "../ui/ContactInfo";
 const ContactFormSec = () => {
   return (
     <section className="py-10 md:py-16 ">
-      <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-4 md:px-6 mb-10 md:mb-14 gap-10 md:gap-5">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-4 md:px-6 mb-10 md:mb-14 gap-10 md:gap-8">
         <ContactForm />
         <ContactInfo />
       </div>

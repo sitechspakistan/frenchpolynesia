@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
 
           {/* Right: CTA Button */}
-          <Button href={"/#"} className="mt-2 md:m-0">
+          <Button href={"/contact"} className="mt-2 md:m-0">
             Plan Your Trip
           </Button>
         </div>

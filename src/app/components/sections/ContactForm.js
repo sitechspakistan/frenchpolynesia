@@ -2,6 +2,7 @@
 import { useState } from "react";
 import ContactInput from "../ui/ContactInput";
 import Button from "../ui/Button";
+import ContactTextarea from "../ui/ContactTextArea";
 
 // const reasonOptions = [
 //   { value: "booking", label: "Booking Enquiry" },
@@ -28,7 +29,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="w-full md:w-[40%]">
+      <div className="w-full md:w-[50%]">
         <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 uppercase">
           Get in Touch
         </h2>
@@ -56,13 +57,13 @@ export default function ContactForm() {
             // value={formData.phone}
             // onChange={handleChange}
           />
-          <ContactInput
-            type="text"
-            name="phone"
+          <ContactTextarea
+            name="description"
             placeholder="Description"
-            // value={formData.phone}
+            // value={formData.description}
             // onChange={handleChange}
           />
+
           <Button className="w-[40%] mt-4">Submit now</Button>
         </form>
       </div>

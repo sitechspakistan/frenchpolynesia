@@ -33,7 +33,7 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3">
               {/* Facebook */}
-              <a
+              {/* <a
                 href="#"
                 className="bg-pink-500 hover:bg-pink-600 transition-colors text-white w-11 h-11 rounded-md flex items-center justify-center"
               >
@@ -51,11 +51,12 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-              </a>
+              </a> */}
 
               {/* YouTube */}
               <a
-                href="#"
+                href="https://www.youtube.com/@thechicatravelista"
+                target="blank"
                 className="bg-pink-500 hover:bg-pink-600 transition-colors text-white w-11 h-11 rounded-md flex items-center justify-center"
               >
                 <svg
@@ -78,7 +79,8 @@ export default function Footer() {
 
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/thefrenchpolynesia"
+                target="blank"
                 className="bg-pink-500 hover:bg-pink-600 transition-colors text-white w-11 h-11 rounded-md flex items-center justify-center"
               >
                 <svg
@@ -108,7 +110,7 @@ export default function Footer() {
               </a>
 
               {/* LinkedIn */}
-              <a
+              {/* <a
                 href="#"
                 className="bg-pink-500 hover:bg-pink-600 transition-colors text-white w-11 h-11 rounded-md flex items-center justify-center"
               >
@@ -138,7 +140,7 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
 
