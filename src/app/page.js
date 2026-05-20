@@ -4,6 +4,7 @@ import DestinationSec from "./components/sections/Destination";
 import BlogSec from "./components/sections/Blog";
 import PromoSec from "./components/sections/PromoSec";
 import CTASec from "./components/sections/CTASec";
+import TravelPlannerSection from "./components/sections/TravelPlannerSection";
 
 export const metadata = {
   title: "French Polynesia",
@@ -17,8 +18,10 @@ export default function Home() {
       <WhyUs />
       <DestinationSec />
       <PromoSec />
-      <BlogSec color={true} heading={"Our Blog"} />
-      <CTASec />
+      <TravelPlannerSection backgroundImage="/assets/images/destinations/fp-bora.jpg" />
+
+      {/* <BlogSec color={true} heading={"Our Blog"} /> */}
+      {/* <CTASec /> */}
     </>
   );
 }

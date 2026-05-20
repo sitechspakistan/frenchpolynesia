@@ -142,8 +142,8 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/destination", label: "Destinations" },
-    { href: "/packages", label: "Packages" },
+    { href: "/destinations", label: "Destinations" },
+    // { href: "/packages", label: "Packages" },
     { href: "/about", label: "About Us" },
     {
       href: "https://thechicatravelista.com/",
@@ -165,7 +165,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex flex-col no-underline">
           <Image
-            src="/assets/images/logo-trans.png"
+            src="/assets/images/french-pol-logo.png"
             alt="French Polynesia Logo"
             width={200}
             height={50}

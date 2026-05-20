@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/">
               <img
-                src="/assets/images/logo-trans.png"
+                src="/assets/images/french-pol-logo.png"
                 alt="The French Polynesia"
                 className="w-48"
               />

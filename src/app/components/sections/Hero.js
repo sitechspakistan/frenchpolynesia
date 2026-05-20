@@ -4,8 +4,8 @@ import Button from "../ui/Button";
 export default function Hero() {
   return (
     <section
-      className="relative flex items-end  bg-cover bg-center h-[400px] md:h-[750px]"
-      style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
+      className="relative flex items-end h-[400px] md:h-[100vh] bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: "url('/assets/images/fp-hero-image.jpg')" }}
     >
       {/* <div className="absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-white/90 to-transparent" /> */}
 
@@ -15,10 +15,9 @@ export default function Hero() {
           {/* Left: Heading */}
           <h1
             className="flex-1 md:flex-2 text-white text-center md:text-left
-           font-bold md:font-extrabold text-xl  md:text-5xl uppercase leading-tight "
+           font-bold md:font-extrabold text-xl  md:text-4xl uppercase leading-tight "
           >
-            Discover the Magic of <br />
-            French Polynesia
+            Discover the Magic of French Polynesia
           </h1>
 
           {/* Right: CTA Button */}

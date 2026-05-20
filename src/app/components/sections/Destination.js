@@ -4,15 +4,7 @@ import DestinationCard from "../ui/DestinationCard";
 const posts = [
   {
     id: 1,
-    imageSrc: "/assets/images/tahiti/dest-01.jpg",
-    category: "The Icon Of Luxury",
-    date: "15 Mar, 2026",
-    title: "BORA BORA",
-    // href: "bulletin/detail",
-  },
-  {
-    id: 2,
-    imageSrc: "/assets/images/tahiti/dest-02.jpg",
+    imageSrc: "/assets/images/destinations/fp-tahiti.jpg",
     category: "The Cultural Heart",
 
     date: "1 Feb, 2026",
@@ -20,12 +12,20 @@ const posts = [
     // href: "bulletin/detail",
   },
   {
-    id: 3,
-    imageSrc: "/assets/images/tahiti/dest-03.jpg",
+    id: 2,
+    imageSrc: "/assets/images/destinations/fp-moorea.jpg",
     category: "Adventure Meets Beauty",
     date: "12 Jan, 2026",
     title: "MOOREA",
     // href: "/bulletin/detail",
+  },
+  {
+    id: 3,
+    imageSrc: "/assets/images/destinations/fp-bora.jpg",
+    category: "The Icon Of Luxury",
+    date: "15 Mar, 2026",
+    title: "BORA BORA",
+    // href: "bulletin/detail",
   },
 ];
 

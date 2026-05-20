@@ -12,15 +12,20 @@ const VideoSec = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 text-center md:text-left">
-        <h2 className="w-full md:w-1/2 text-3xl md:text-5xl">
-          See how we create trips travels
-          <span className="text-pink-500"> that awaken dreams </span>
-          bring the world closer
+      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-10 text-center md:text-left ">
+        <h2 className="w-full  text-3xl md:text-5xl">
+          Welcome to
+          <span className="text-pink-500"> The French Polynesia </span>
+          where luxury travel meets true destination expertise.
         </h2>
-        <p className="text-base md:text-lg md:mr-8">
-          We don't just plan trips - we craft <br />
-          experiences that stay with you
+        <p className="text-base md:mr-8 w-full ">
+          At The French Polynesia, we don't just book vacations - we curate
+          seamless, deeply personalized journeys throughout the islands of
+          French Polynesia. From the overwater bungalows of Bora Bora to the
+          lush mountains of Moorea, the black sand beaches of Tahiti, and the
+          untouched beauty of Taha'a and Rangiroa, our team specializes
+          exclusively in crafting extraordinary experiences across these
+          islands.
         </p>
       </div>
 
