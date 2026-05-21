@@ -33,7 +33,7 @@ const destinations = [
   },
   {
     tagline: "The Icon of Luxury",
-    name: "BORA BORA",
+    name: "Bora Bora",
     description:
       "Bora Bora is the ultimate luxury destination known for its crystal-clear lagoon and overwater villas",
     activities: ["Plan your trip", "Jet Ski", "Sunset Cruises"],

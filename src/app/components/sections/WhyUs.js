@@ -3,6 +3,7 @@ import FeatureCard from "../ui/FeatureCard";
 
 export default function WhyUs({
   paragraph = `At The French Polynesia, we don't just book vacations - we curate seamless, deeply personalized journeys throughout the islands of French Polynesia. From the overwater bungalows of Bora Bora to the lush mountains of Moorea, the black sand beaches of Tahiti, and the untouched beauty of Taha'a and Rangiroa, our team specializes exclusively in crafting extraordinary experiences across these islands.`,
+  button = false,
 }) {
   return (
     <section className="relative py-10 md:py-16 bg-white">
@@ -12,13 +13,13 @@ export default function WhyUs({
           <h2 className="text-3xl md:text-5xl font-bold mb-4 ">
             Welcome to <br /> French Polynesia
           </h2>
-          <h3 className="text-xl mb-4 ">
+          <h3 className="text-xl mb-4 text-gray-500">
             Where luxury travel meets true destination expertise.
           </h3>
           <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
             {paragraph}
           </p>
-          <Button href="/about">Learn More</Button>
+          {button && <Button href="/about">Learn More</Button>}
         </div>
 
         <div className="hidden md:flex w-1/2 shrink-0 h-[520px] gap-3">

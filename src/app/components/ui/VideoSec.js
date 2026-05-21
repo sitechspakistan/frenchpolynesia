@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import React from "react";
 import ReactPlayer from "react-player";
 
-const VideoSec = () => {
+const VideoSec = ({ heading = "", paragraph = "", subheading = "" }) => {
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
   const [hovering, setHovering] = useState(false);
@@ -12,24 +12,15 @@ const VideoSec = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-10 text-center md:text-left ">
-        <h2 className="w-full  text-3xl md:text-5xl">
-          Welcome to
-          <span className="text-pink-500"> The French Polynesia </span>
-          where luxury travel meets true destination expertise.
-        </h2>
-        <p className="text-base md:mr-8 w-full ">
-          At The French Polynesia, we don't just book vacations - we curate
-          seamless, deeply personalized journeys throughout the islands of
-          French Polynesia. From the overwater bungalows of Bora Bora to the
-          lush mountains of Moorea, the black sand beaches of Tahiti, and the
-          untouched beauty of Taha'a and Rangiroa, our team specializes
-          exclusively in crafting extraordinary experiences across these
-          islands.
-        </p>
+      <div className="flex flex-col md:flex-row justify-between  gap-10 md:gap-10 text-center md:text-left">
+        <div className="pb-10 md:pb-16">
+          {heading}
+          <h4 className="text-base  w-full text-gray-500">{subheading}</h4>
+        </div>
+        <p className="text-base  w-full ">{paragraph}</p>
       </div>
 
-      <div className="pt-10 md:pt-15">
+      <div>
         <div
           className="relative rounded-[20px] overflow-hidden w-full aspect-video md:aspect-auto md:h-[500px] cursor-pointer "
           onMouseEnter={() => setHovering(true)} // 👈

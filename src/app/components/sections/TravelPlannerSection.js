@@ -13,14 +13,13 @@ export default function TravelPlannerSection({
 
       {/* Left - Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center p-10 ">
-        <span className="text-sm font-medium tracking-[0.15em] text-white/80 uppercase mb-3">
+        <span className="text-sm font-medium tracking-[0.15em] text-white/80 capitalize mb-3">
           Ready to explore
         </span>
 
         <span className="w-16 h-1 bg-(--primary) mb-4" />
-        <h1 className="text-5xl font-bold text-white uppercase leading-[1.05] mb-4">
-          Plan your
-          <br /> perfect escape
+        <h1 className="text-5xl font-bold text-white capitalize leading-[1.05] mb-4">
+          Plan your perfect escape
         </h1>
         <p className="text-base  text-white leading-relaxed max-w-[80%]">
           Tell us a few details about your dream trip and we'll create the

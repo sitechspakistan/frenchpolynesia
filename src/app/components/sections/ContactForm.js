@@ -30,7 +30,7 @@ export default function ContactForm() {
   return (
     <>
       <div className="w-full md:w-[50%]">
-        <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 uppercase">
+        <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 capitalize">
           Get in Touch
         </h2>
         <form className=" flex flex-col gap-4 ">

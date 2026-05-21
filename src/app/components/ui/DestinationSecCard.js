@@ -33,7 +33,7 @@ export default function DestinationSecCard({
           </p>
 
           {/* Destination Name */}
-          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-2 md:mb-3">
+          <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-2 md:mb-3 capitalize">
             {name}
           </h2>
 

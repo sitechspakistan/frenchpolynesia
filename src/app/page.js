@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhyUs />
+      <WhyUs button={true} />
       <DestinationSec />
       <PromoSec />
       <TravelPlannerSection backgroundImage="/assets/images/destinations/fp-bora.jpg" />
