@@ -14,7 +14,7 @@ const SpecialistModal = ({ specialist, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Image */}
-        <div className="relative w-[50%] sm:h-auto flex-shrink-0">
+        <div className="relative w-[50%] h-[50%] sm:h-auto flex-shrink-0">
           <Image
             src={specialist.image}
             alt={specialist.name}

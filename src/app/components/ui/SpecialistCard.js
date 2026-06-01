@@ -3,7 +3,7 @@ import React from "react";
 const SpecialistCard = ({ specialist, onClick }) => {
   return (
     <div
-      className="bg-white flex flex-col p-3 rounded-2xl shadow justify-between"
+      className="bg-white flex flex-col p-3 rounded-2xl shadow justify-between cursor-pointer"
       onClick={() => onClick(specialist)}
     >
       {/* Image */}

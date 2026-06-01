@@ -143,7 +143,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/destinations", label: "Destinations" },
-    // { href: "/packages", label: "Packages" },
+    { href: "/specialists", label: "Specialists" },
     { href: "/about", label: "About Us" },
     {
       href: "https://thechicatravelista.com/",

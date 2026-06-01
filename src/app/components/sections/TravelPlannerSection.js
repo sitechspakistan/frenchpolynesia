@@ -1,24 +1,34 @@
+"use client";
+
 import Button from "../ui/Button";
+import { motion } from "framer-motion";
 
 export default function TravelPlannerSection({
   backgroundImage = "/assets/travel/hero-bg.jpg",
 }) {
   return (
-    <div
-      className="relative flex rounded-4xl overflow-hidden bg-cover bg-center mx-4 md:mx-6 mb-16 p-10 md:p-16"
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.7,
+        ease: "easeOut",
+      }}
+      className="relative flex flex-col md:flex-row rounded-4xl overflow-hidden bg-cover bg-center mx-4 md:mx-6 mb-16 p-6 md:p-16"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 " />
 
       {/* Left - Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center p-10 ">
+      <div className="relative z-10 flex-1 flex flex-col justify-center py-10 md:p-10 ">
         <span className="text-sm font-medium tracking-[0.15em] text-white/80 capitalize mb-3">
           Ready to explore
         </span>
 
         <span className="w-16 h-1 bg-(--primary) mb-4" />
-        <h1 className="text-5xl font-bold text-white capitalize leading-[1.05] mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-white capitalize leading-[1.05] mb-4">
           Plan your perfect escape
         </h1>
         <p className="text-base  text-white leading-relaxed max-w-[80%]">
@@ -29,7 +39,7 @@ export default function TravelPlannerSection({
 
       {/* Right - Form */}
       <div className="relative z-10 flex-[1.3] bg-white rounded-xl flex flex-col gap-4  p-8">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col gap-1.5">
             <label className="text-sm font-semibold ">
               Name of passengers <span className="text-(--primary)">*</span>
@@ -92,6 +102,6 @@ export default function TravelPlannerSection({
 
         <Button className="cursor-pointer ">Start planning my trip</Button>
       </div>
-    </div>
+    </motion.div>
   );
 }

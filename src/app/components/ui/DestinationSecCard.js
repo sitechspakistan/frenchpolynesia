@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function DestinationSecCard({
   tagline = "Adventure Meets Beauty",
   name = "MOOREA",
@@ -14,16 +17,26 @@ export default function DestinationSecCard({
       className={`flex flex-col overflow-hidden bg-white max-w-7xl mx-auto gap-5 mb-10 last:mb-0  ${imagePosition === "right" ? "md:flex-row-reverse" : "md:flex-row"} `}
     >
       {/* Left: Image */}
-      <div className="w-full md:w-[45%] flex-shrink-0 p-4 bg-(--section-bg) rounded-xl ">
+      <motion.div
+        initial={{ opacity: 0, x: imagePosition === "right" ? 50 : -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full md:w-[45%] flex-shrink-0 p-4 bg-(--section-bg) rounded-xl "
+      >
         <img
           src={image}
           alt={imageAlt}
           className="object-cover h-full rounded-sm"
         />
-      </div>
+      </motion.div>
 
       {/* Right: Content */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: imagePosition === "right" ? -50 : 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
         className={`w-full md:w-[55%] flex flex-col justify-center py-0 md:py-12 gap-4 md:gap-10`}
       >
         {/* Tagline */}
@@ -77,7 +90,7 @@ export default function DestinationSecCard({
             {perfectFor}
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

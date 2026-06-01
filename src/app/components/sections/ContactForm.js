@@ -3,6 +3,7 @@ import { useState } from "react";
 import ContactInput from "../ui/ContactInput";
 import Button from "../ui/Button";
 import ContactTextarea from "../ui/ContactTextArea";
+import { motion } from "framer-motion";
 
 // const reasonOptions = [
 //   { value: "booking", label: "Booking Enquiry" },
@@ -30,10 +31,22 @@ export default function ContactForm() {
   return (
     <>
       <div className="w-full md:w-[50%]">
-        <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 capitalize">
+        <motion.h2
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 capitalize"
+        >
           Get in Touch
-        </h2>
-        <form className=" flex flex-col gap-4 ">
+        </motion.h2>
+        <motion.form
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className=" flex flex-col gap-4 "
+        >
           <ContactInput
             type="text"
             name="fullName"
@@ -63,9 +76,18 @@ export default function ContactForm() {
             // value={formData.description}
             // onChange={handleChange}
           />
-
-          <Button className="w-[40%] mt-4">Submit now</Button>
-        </form>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.1,
+              duration: 0.5,
+            }}
+          >
+            <Button className="w-[40%] mt-4">Submit now</Button>
+          </motion.div>
+        </motion.form>
       </div>
     </>
   );

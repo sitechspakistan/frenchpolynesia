@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const HeroSecond = ({ heading }) => {
   return (
@@ -10,9 +12,14 @@ const HeroSecond = ({ heading }) => {
       <div className="absolute w-full backdrop-blur-xs z-8 bottom-0 left-0 bg-white/10 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex px-4 md:px-6 justify-center items-center h-[80px] md:h-[200px]">
           {/* Left: Heading */}
-          <h1 className="text-white font-bold md:font-extrabold text-3xl md:text-5xl uppercase leading-tight text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-white font-bold md:font-extrabold text-3xl md:text-5xl uppercase leading-tight text-center"
+          >
             {heading}
-          </h1>
+          </motion.h1>
         </div>
       </div>
     </section>

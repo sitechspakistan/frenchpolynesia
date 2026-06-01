@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { label: "Destinations", href: "/destination", target: "" },
-  { label: "Packages", href: "/packages", target: "" },
+  { label: "Destinations", href: "/destinations", target: "" },
+  { label: "Specialists", href: "/specialists", target: "" },
   { label: "About Us", href: "/about", target: "" },
   { label: "Blogs", href: "https://thechicatravelista.com/", target: "blank" },
   { label: "Contact Us", href: "/contact", target: "" },

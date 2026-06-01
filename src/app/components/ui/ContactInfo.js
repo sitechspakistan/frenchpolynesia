@@ -1,8 +1,16 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const ContactInfo = () => {
   return (
-    <div className="w-full md:w-[50%]">
+    <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="w-full md:w-[50%]"
+    >
       <p className="text-base mb-4 md:mb-10">
         Please reach out to our Customer Care team with any questions you may
         have. To learn more about Supplements, refer to our FAQs page below.
@@ -58,7 +66,7 @@ const ContactInfo = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

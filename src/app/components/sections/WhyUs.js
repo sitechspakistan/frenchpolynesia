@@ -1,5 +1,7 @@
+"use client";
 import Button from "../ui/Button";
 import FeatureCard from "../ui/FeatureCard";
+import { motion } from "framer-motion";
 
 export default function WhyUs({
   paragraph = `At The French Polynesia, we don't just book vacations - we curate seamless, deeply personalized journeys throughout the islands of French Polynesia. From the overwater bungalows of Bora Bora to the lush mountains of Moorea, the black sand beaches of Tahiti, and the untouched beauty of Taha'a and Rangiroa, our team specializes exclusively in crafting extraordinary experiences across these islands.`,
@@ -10,19 +12,53 @@ export default function WhyUs({
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
         {/* LEFT: Text — full width on mobile, half on desktop */}
         <div className="w-full md:w-1/2 md:pr-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 ">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0, duration: 0.8 }}
+            className="text-3xl md:text-5xl font-bold mb-4"
+          >
             Welcome to <br /> French Polynesia
-          </h2>
-          <h3 className="text-xl mb-4 text-gray-500">
+          </motion.h2>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-xl mb-4 text-gray-500"
+          >
             Where luxury travel meets true destination expertise.
-          </h3>
-          <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-sm md:text-base text-gray-700 mb-4 md:mb-6"
+          >
             {paragraph}
-          </p>
-          {button && <Button href="/about">Learn More</Button>}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+            }}
+          >
+            {button && <Button href="/about">Learn More</Button>}
+          </motion.div>
         </div>
 
-        <div className="hidden md:flex w-1/2 shrink-0 h-[520px] gap-3">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="hidden md:flex w-1/2 shrink-0 h-[520px] gap-3"
+        >
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-3 pt-10">
             <div className="flex-1 rounded-2xl overflow-hidden h-[270px]">
@@ -58,7 +94,7 @@ export default function WhyUs({
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
