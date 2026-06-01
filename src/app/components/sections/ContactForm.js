@@ -36,7 +36,7 @@ export default function ContactForm() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 capitalize"
+          className="text-3xl md:text-5xl font-bold md:font-extrabold mb-6 md:mb-10 capitalize text-center md:text-left"
         >
           Get in Touch
         </motion.h2>
@@ -84,8 +84,9 @@ export default function ContactForm() {
               delay: 0.1,
               duration: 0.5,
             }}
+            className="self-center md:self-start"
           >
-            <Button className="w-[40%] mt-4">Submit now</Button>
+            <Button className="w-full md:w-[40%] mt-4">Submit now</Button>
           </motion.div>
         </motion.form>
       </div>

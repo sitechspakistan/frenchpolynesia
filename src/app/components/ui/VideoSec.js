@@ -13,7 +13,7 @@ const VideoSec = ({ heading = "", paragraph = "", subheading = "" }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6">
-      <div className="flex flex-col md:flex-row justify-between  md:gap-10 text-center md:text-left">
+      <div className="flex flex-col md:flex-row justify-between  md:gap-10 text-center md:text-left overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -22,6 +22,7 @@ const VideoSec = ({ heading = "", paragraph = "", subheading = "" }) => {
           className="pb-6 md:pb-16"
         >
           {heading}
+
           <h4 className="text-base w-full text-gray-500">{subheading}</h4>
         </motion.div>
         <motion.p
@@ -29,7 +30,7 @@ const VideoSec = ({ heading = "", paragraph = "", subheading = "" }) => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-          className="text-base  w-full pb-6 md:pb-0"
+          className="text-base  w-full pb-6 md:pb-0 text-gray-500"
         >
           {paragraph}
         </motion.p>

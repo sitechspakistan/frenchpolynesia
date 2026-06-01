@@ -35,7 +35,7 @@ export default function WhyUs({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-sm md:text-base text-gray-700 mb-4 md:mb-6"
+            className="text-sm md:text-base text-gray-500 mb-4 md:mb-6"
           >
             {paragraph}
           </motion.p>

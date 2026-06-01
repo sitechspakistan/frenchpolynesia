@@ -17,19 +17,19 @@ const ContactInfo = () => {
       </p>
       <div className="flex flex-col md:flex-row gap-5">
         <div className="flex-1">
-          <h3 className="text-2xl font-bold  md:mb-5">
+          <h3 className="text-xl md:text-2xl font-bold  md:mb-5">
             Address <br className="hidden md:block" /> Business
           </h3>
           <p>4314 Stanley St Pittsburgh, Pennsylvania 15207</p>
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold  md:mb-5">
+          <h3 className="text-xl md:text-2xl font-bold  md:mb-5">
             Contact <br className="hidden md:block" /> With Us
           </h3>
           <p>+412-458-9665</p>
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold  md:mb-5">
+          <h3 className="text-xl md:text-2xl font-bold  md:mb-5">
             Our <br className="hidden md:block" /> Email
           </h3>
           <p>frenchpolynesia@email.com</p>

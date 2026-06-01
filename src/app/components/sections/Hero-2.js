@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const HeroSecond = ({ heading }) => {
   return (
     <section
-      className="relative flex items-end  bg-cover bg-center  h-[350px] md:h-[450px]"
+      className="relative flex items-end  bg-cover bg-center  h-[300px] md:h-[450px]"
       style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
     >
       {/* Glass effect bottom bar */}
@@ -16,7 +16,7 @@ const HeroSecond = ({ heading }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-white font-bold md:font-extrabold text-3xl md:text-5xl uppercase leading-tight text-center"
+            className="text-white font-bold md:font-extrabold text-2xl md:text-5xl uppercase leading-tight text-center"
           >
             {heading}
           </motion.h1>

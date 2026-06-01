@@ -8,7 +8,7 @@ const PromoSec = () => {
       <VideoSec
         heading={
           <>
-            <h2 className="text-3xl md:text-4xl mb-1 capitalize">
+            <h2 className="text-2xl md:text-4xl pb-6 md:pb-1 capitalize">
               Why Book with{" "}
               <span className="text-pink-500"> The French Polynesia </span>
               Concierge Team?

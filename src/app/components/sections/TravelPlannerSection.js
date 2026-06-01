@@ -22,16 +22,16 @@ export default function TravelPlannerSection({
       <div className="absolute inset-0 bg-black/40 " />
 
       {/* Left - Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center py-10 md:p-10 ">
+      <div className="relative z-10 flex-1 flex flex-col justify-center py-10 md:p-10 text-center md:text-left">
         <span className="text-sm font-medium tracking-[0.15em] text-white/80 capitalize mb-3">
           Ready to explore
         </span>
 
-        <span className="w-16 h-1 bg-(--primary) mb-4" />
+        <span className="w-16 h-1 bg-(--primary) mb-4 self-center md:self-start" />
         <h1 className="text-4xl md:text-5xl font-bold text-white capitalize leading-[1.05] mb-4">
           Plan your perfect escape
         </h1>
-        <p className="text-base  text-white leading-relaxed max-w-[80%]">
+        <p className="text-base  text-white leading-relaxed w-full md:max-w-[80%]">
           Tell us a few details about your dream trip and we'll create the
           perfect experience for you.
         </p>
