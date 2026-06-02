@@ -24,15 +24,15 @@ const SpecialistModal = ({ specialist, onClose }) => {
       <div
         className="
           bg-white overflow-hidden shadow-2xl rounded-3xl
-          flex flex-col sm:flex-row
-          w-[80%] sm:w-full sm:max-w-4xl
-          max-h-[85vh] overflow-y-auto
+          flex flex-col md:flex-row
+          w-[80%]  md:w-4xl
+          h-[80vh] md:h-[50vh] overflow-y-auto md:overflow-hidden
         "
         onClick={(e) => e.stopPropagation()}
       >
         {/* ✅ Mobile: Close Button — sabse upar */}
         <div
-          className="flex sm:hidden items-center justify-end px-5 pt-5 cursor-pointer flex-shrink-0"
+          className="flex sm:hidden items-center justify-end px-5 py-4  cursor-pointer flex-shrink-0"
           onClick={onClose}
         >
           <Image
@@ -44,7 +44,7 @@ const SpecialistModal = ({ specialist, onClose }) => {
         </div>
 
         {/* Image */}
-        <div className="relative w-full sm:w-[50%] h-[220px] sm:h-auto flex-shrink-0">
+        <div className="relative w-full md:w-[50%] h-[220px] md:h-full flex-shrink-0">
           <Image
             src={specialist.image}
             alt={specialist.name}
@@ -54,10 +54,13 @@ const SpecialistModal = ({ specialist, onClose }) => {
         </div>
 
         {/* Content */}
-        <div className="px-6 sm:px-8 pb-8 pt-5 sm:pt-8 flex flex-col justify-center gap-3 w-full sm:w-[50%]">
+        <div
+          className="px-6  pb-8 pt-5 md:pt-6 flex flex-col justify-start gap-3 w-full md:w-[50%] gap-3 md:h-auto md:overflow-y-auto
+ "
+        >
           {/* ✅ Desktop: Close Button — content ke andar top right */}
           <div
-            className="hidden sm:flex items-center justify-end cursor-pointer"
+            className="hidden md:flex items-center justify-end cursor-pointer"
             onClick={onClose}
           >
             <Image

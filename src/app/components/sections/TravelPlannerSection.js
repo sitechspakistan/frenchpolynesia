@@ -2,10 +2,55 @@
 
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
+import DateRange from "../ui/DateRange";
+import { useState } from "react";
 
 export default function TravelPlannerSection({
   backgroundImage = "/assets/travel/hero-bg.jpg",
 }) {
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    nameOfPassengers: "",
+    travelDates: null,
+    island: "",
+    budget: "",
+    additionalNotes: "",
+  });
+  const handleSubmit = async () => {
+    try {
+      setLoading(true);
+      setStatus("");
+
+      const response = await fetch("/api/get-a-quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("Form submitted successfully!");
+
+        setFormData({
+          nameOfPassengers: "",
+          travelDates: null,
+          island: "",
+          budget: "",
+          additionalNotes: "",
+        });
+      } else {
+        setStatus("Failed to submit form");
+      }
+    } catch (error) {
+      setStatus("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -47,6 +92,10 @@ export default function TravelPlannerSection({
             <input
               type="text"
               placeholder="e.g. John Doe, Jane Doe"
+              value={formData.nameOfPassengers}
+              onChange={(e) =>
+                setFormData({ ...formData, nameOfPassengers: e.target.value })
+              }
               className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
             />
           </div>
@@ -54,12 +103,15 @@ export default function TravelPlannerSection({
             <label className="text-sm font-semibold ">
               Dates of travel <span className="text-(--primary)">*</span>
             </label>
-            <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden focus-within:border-pink-400 focus-within:ring-2 focus-within:ring-pink-100 transition">
-              <input
-                type="date"
-                className="flex-1 px-2 py-2.5 text-xs text-gray-500 focus:outline-none min-w-0"
-              />
-            </div>
+            <DateRange
+              value={formData.travelDates}
+              onChange={(dates) =>
+                setFormData({
+                  ...formData,
+                  travelDates: dates,
+                })
+              }
+            />
           </div>
         </div>
 
@@ -67,7 +119,13 @@ export default function TravelPlannerSection({
           <label className="text-sm font-semibold ">
             Islands interested in <span className="text-(--primary)">*</span>
           </label>
-          <select className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-500 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition">
+          <select
+            value={formData.island}
+            onChange={(e) =>
+              setFormData({ ...formData, island: e.target.value })
+            }
+            className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-500 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
+          >
             <option value="">Select or type islands</option>
             {["Tahiti", "Moorea", "Bora Bora", "Taha'a", "Raiatea"].map((i) => (
               <option key={i}>{i}</option>
@@ -83,6 +141,10 @@ export default function TravelPlannerSection({
             <input
               type="text"
               placeholder="e.g. $2,000 - $5,000"
+              value={formData.budget}
+              onChange={(e) =>
+                setFormData({ ...formData, budget: e.target.value })
+              }
               className="w-full border border-gray-200 rounded-lg px-3 py-2.5 pr-8 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
             />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">
@@ -94,13 +156,23 @@ export default function TravelPlannerSection({
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-semibold ">Additional notes</label>
           <textarea
+            value={formData.additionalNotes}
+            onChange={(e) =>
+              setFormData({ ...formData, additionalNotes: e.target.value })
+            }
             rows={3}
             placeholder="Tell us more about your travel plans..."
             className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition resize-none"
           />
         </div>
 
-        <Button className="cursor-pointer ">Start planning my trip</Button>
+        <Button
+          onClick={handleSubmit}
+          disabled={loading}
+          className="cursor-pointer "
+        >
+          {loading ? "Sending..." : "Start planning my trip"}
+        </Button>
       </div>
     </motion.div>
   );
