@@ -9,8 +9,8 @@ const destinations = [
     description:
       "Tahiti is the cultural and economic center with vibrant markets and black sand beaches.",
     activities: ["Papeete Market", "Sand Beaches", "Waterfalls"],
-    bestTime:
-      "May to October — ideal weather with low humidity and refreshing breezes.",
+    // bestTime:
+    //   "May to October — ideal weather with low humidity and refreshing breezes.",
     perfectFor:
       "Culture seekers, foodies, and travelers wanting authentic Polynesian life.",
     image: "/assets/images/destinations/fp-tahiti.jpg",
@@ -23,8 +23,8 @@ const destinations = [
     description:
       "Moorea offers lush mountains, adventure activities, and scenic beauty.",
     activities: ["Mountain Hiking", "Diving", "Whale Watching"],
-    bestTime:
-      "July to October — whale watching season and perfect hiking weather.",
+    // bestTime:
+    //   "July to October — whale watching season and perfect hiking weather.",
     perfectFor:
       "Adventure travelers, divers, and those seeking dramatic natural landscapes.",
     image: "/assets/images/destinations/fp-moorea.jpg",
@@ -37,8 +37,8 @@ const destinations = [
     description:
       "Bora Bora is the ultimate luxury destination known for its crystal-clear lagoon and overwater villas",
     activities: ["Plan your trip", "Jet Ski", "Sunset Cruises"],
-    bestTime:
-      "May to October - dry season with clear skies and calm lagoon waters.",
+    // bestTime:
+    //   "May to October - dry season with clear skies and calm lagoon waters.",
     perfectFor: "Honeymooners, luxury travelers, and water sports enthusiasts.",
     image: "/assets/images/destinations/fp-bora.jpg",
     imageAlt: "Bora Bora lagoon and overwater bungalows",
@@ -51,8 +51,8 @@ const destinations = [
     description:
       "Taha'a Island is known for its tranquil lagoons, vanilla plantations, and authentic Polynesian charm.",
     activities: ["Lagoon Tours", "Vanilla Farm Visits", "Snorkeling"],
-    bestTime:
-      "May to October - ideal weather for lagoon activities and island exploration.",
+    // bestTime:
+    //   "May to October - ideal weather for lagoon activities and island exploration.",
     perfectFor:
       "Couples, honeymooners, and travelers seeking a peaceful tropical retreat.",
     image: "/assets/images/destinations/fp-taha.jpg",
@@ -65,8 +65,8 @@ const destinations = [
     description:
       "Raiatea blends rich Polynesian history with lush landscapes, waterfalls, and world-class sailing adventures.",
     activities: ["River Kayaking", "Sailing", "Cultural Tours"],
-    bestTime:
-      "April to November - comfortable temperatures and excellent sailing conditions.",
+    // bestTime:
+    //   "April to November - comfortable temperatures and excellent sailing conditions.",
     perfectFor:
       "Culture enthusiasts, sailors, and nature lovers looking for authentic island experiences.",
     image: "/assets/images/destinations/fp-raiatea.jpg",

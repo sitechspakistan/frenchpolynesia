@@ -5,6 +5,8 @@ import HeroSecond from "../components/sections/Hero-2";
 import VideoSec from "../components/ui/VideoSec";
 import AboutSec from "../components/ui/AboutSec";
 import FeaturesSec from "../components/sections/FeaturesSec";
+import CTATeamJoin from "../components/sections/CTATeamJoin";
+import PartnersSec from "../components/sections/PartnersSec";
 
 export const metadata = {
   title: "About Us | French Polynesia",
@@ -15,7 +17,13 @@ const aboutUs = () => {
   return (
     <>
       <HeroSecond heading={"About Us"} />
-      <WhyUs />
+      <WhyUs
+        subheading="Certified Tahiti Specialist"
+        imageLayout="single"
+        singleImage="/assets/certificate/certificate.png"
+      />
+      <CTATeamJoin />
+      <PartnersSec />
       <FeaturesSec />
       <section className="pb-10 md:pb-16">
         <VideoSec />

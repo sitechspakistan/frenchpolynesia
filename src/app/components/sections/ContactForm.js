@@ -86,7 +86,7 @@ export default function ContactForm() {
             }}
             className="self-center md:self-start"
           >
-            <Button className="w-full md:w-[40%] mt-4">Submit now</Button>
+            <Button className="w-full md:w-[100%] mt-4">Submit now</Button>
           </motion.div>
         </motion.form>
       </div>

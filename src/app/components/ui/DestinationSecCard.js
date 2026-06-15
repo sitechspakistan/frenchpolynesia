@@ -74,12 +74,12 @@ export default function DestinationSecCard({
         </div>
 
         {/* Best Time To Visit */}
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <h3 className="text-lg font-semibold text-gray-900 tracking-widest uppercase mb-1 md:mb-2">
             Best Time To Visit
           </h3>
           <p className="text-gray-600 text-base leading-relaxed">{bestTime}</p>
-        </div>
+        </div> */}
 
         {/* Perfect For */}
         <div className="flex flex-col">

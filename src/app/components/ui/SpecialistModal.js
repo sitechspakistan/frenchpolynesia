@@ -49,7 +49,7 @@ const SpecialistModal = ({ specialist, onClose }) => {
             src={specialist.image}
             alt={specialist.name}
             fill
-            className="object-cover"
+            className=""
           />
         </div>
 
@@ -60,9 +60,10 @@ const SpecialistModal = ({ specialist, onClose }) => {
         >
           {/* ✅ Desktop: Close Button — content ke andar top right */}
           <div
-            className="hidden md:flex items-center justify-end cursor-pointer"
+            className="hidden md:flex items-center justify-between cursor-pointer"
             onClick={onClose}
           >
+            <h3 className="text-2xl font-bold">{specialist.name}</h3>
             <Image
               src="/assets/icons/close.svg"
               alt="Close Modal"
@@ -71,12 +72,15 @@ const SpecialistModal = ({ specialist, onClose }) => {
             />
           </div>
 
-          <h3 className="text-2xl font-bold">{specialist.name}</h3>
           <p className="text-sm font-semibold text-[#666666]">
             {specialist.specialization}
           </p>
           <p className="text-[#666666] text-base leading-relaxed mt-2">
             "{specialist.quote}"
+          </p>
+
+          <p className="text-[#666666] text-base leading-relaxed mt-2">
+            {specialist.contact}
           </p>
         </div>
       </div>

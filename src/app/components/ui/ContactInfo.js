@@ -20,7 +20,7 @@ const ContactInfo = () => {
           <h3 className="text-xl md:text-2xl font-bold  md:mb-5">
             Address <br className="hidden md:block" /> Business
           </h3>
-          <p>4314 Stanley St Pittsburgh, Pennsylvania 15207</p>
+          <p>Tahiti, French Polynesia & Port Jefferson, NY</p>
         </div>
         <div className="flex-1">
           <h3 className="text-xl md:text-2xl font-bold  md:mb-5">

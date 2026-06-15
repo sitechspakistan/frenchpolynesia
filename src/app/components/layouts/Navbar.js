@@ -141,9 +141,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
+    // { href: "/", label: "Home" },
     { href: "/destinations", label: "Destinations" },
-    { href: "/specialists", label: "Specialists" },
+    { href: "/concierge-team", label: "Concierge Team" },
     { href: "/about", label: "About Us" },
     {
       href: "https://thechicatravelista.com/",
@@ -158,7 +158,7 @@ const Navbar = () => {
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white shadow-sm"
-          : "bg-gradient-to-b from-white via-white/80 to-transparent"
+          : "bg-gradient-to-b from-white via-white/90 to-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:py-4 md:px-6">

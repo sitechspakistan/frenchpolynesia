@@ -6,7 +6,7 @@ const HeroSecond = ({ heading }) => {
   return (
     <section
       className="relative flex items-end  bg-cover bg-center  h-[300px] md:h-[450px]"
-      style={{ backgroundImage: "url('/assets/images/hero-image.png')" }}
+      style={{ backgroundImage: "url('/assets/images/hero-image.jpg')" }}
     >
       {/* Glass effect bottom bar */}
       <div className="absolute w-full backdrop-blur-xs z-8 bottom-0 left-0 bg-white/10 border-t border-white/10">

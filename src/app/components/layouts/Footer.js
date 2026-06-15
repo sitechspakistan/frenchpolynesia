@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const links = [
   { label: "Destinations", href: "/destinations", target: "" },
-  { label: "Specialists", href: "/specialists", target: "" },
+  { label: "Concierge Team", href: "/concierge-team", target: "" },
   { label: "About Us", href: "/about", target: "" },
   { label: "Blogs", href: "https://thechicatravelista.com/", target: "blank" },
   { label: "Contact Us", href: "/contact", target: "" },
@@ -180,7 +180,7 @@ export default function Footer() {
               </p>
               <p className="text-sm text-gray-700">
                 <span className="font-bold text-gray-900">Address : </span>
-                4314 Stanley St Pittsburgh, Pennsylvania 15207
+                Tahiti, French Polynesia & Port Jefferson, NY
               </p>
             </div>
           </div>

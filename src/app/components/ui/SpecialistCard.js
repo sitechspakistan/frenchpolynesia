@@ -7,7 +7,7 @@ const SpecialistCard = ({ specialist, onClick }) => {
       onClick={() => onClick(specialist)}
     >
       {/* Image */}
-      <div className="w-full h-[340px]">
+      <div className="w-full h-[360px]">
         <img
           src={`${specialist.image}`}
           alt={specialist.name}
