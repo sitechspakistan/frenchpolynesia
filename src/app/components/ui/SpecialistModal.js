@@ -26,7 +26,7 @@ const SpecialistModal = ({ specialist, onClose }) => {
           bg-white overflow-hidden shadow-2xl rounded-3xl
           flex flex-col md:flex-row
           w-[80%]  md:w-4xl
-          h-[80vh] md:h-[50vh] overflow-y-auto md:overflow-hidden
+          h-[80vh] md:h-[60vh] overflow-y-auto md:overflow-hidden
         "
         onClick={(e) => e.stopPropagation()}
       >
@@ -49,7 +49,7 @@ const SpecialistModal = ({ specialist, onClose }) => {
             src={specialist.image}
             alt={specialist.name}
             fill
-            className=""
+            className="object-cover"
           />
         </div>
 
