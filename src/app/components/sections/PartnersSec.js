@@ -36,7 +36,7 @@ const PartnersSec = () => {
             md:justify-center
             md:overflow-x-hidden         
             gap-6 md:gap-10
-            scrollbar-hide  "
+            scrollbar-hide "
         >
           {partners.map((partner, index) => (
             <motion.div
@@ -45,7 +45,7 @@ const PartnersSec = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="min-w-[200px]  
+              className="min-w-[65%]  
 flex-shrink-0
           snap-center
           flex
