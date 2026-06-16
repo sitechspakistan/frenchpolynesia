@@ -3,7 +3,7 @@ import HeroSecond from "../components/sections/Hero-2";
 import SpecialistSec from "../components/sections/SpecialistSec";
 
 export const metadata = {
-  title: "Specialists | French Polynesia",
+  title: "Concierge Team | French Polynesia",
   // description: "...",
 };
 

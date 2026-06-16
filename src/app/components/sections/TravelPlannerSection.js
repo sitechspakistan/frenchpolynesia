@@ -17,7 +17,8 @@ export default function TravelPlannerSection({
     budget: "",
     additionalNotes: "",
   });
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       setLoading(true);
       setStatus("");
@@ -83,13 +84,17 @@ export default function TravelPlannerSection({
       </div>
 
       {/* Right - Form */}
-      <div className="relative z-10 flex-[1.3] bg-white rounded-xl flex flex-col gap-4  p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="relative z-10 flex-[1.3] bg-white rounded-xl flex flex-col gap-4  p-8"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col gap-1.5">
             <label className="text-sm font-semibold ">
               Name of passengers <span className="text-(--primary)">*</span>
             </label>
             <input
+              required
               type="text"
               placeholder="e.g. John Doe, Jane Doe"
               value={formData.nameOfPassengers}
@@ -120,6 +125,7 @@ export default function TravelPlannerSection({
             Islands interested in <span className="text-(--primary)">*</span>
           </label>
           <select
+            required
             value={formData.island}
             onChange={(e) =>
               setFormData({ ...formData, island: e.target.value })
@@ -139,6 +145,7 @@ export default function TravelPlannerSection({
           </label>
           <div className="relative">
             <input
+              required
               type="text"
               placeholder="e.g. $2,000 - $5,000"
               value={formData.budget}
@@ -166,14 +173,10 @@ export default function TravelPlannerSection({
           />
         </div>
 
-        <Button
-          onClick={handleSubmit}
-          disabled={loading}
-          className="cursor-pointer "
-        >
+        <Button type="submit" disabled={loading} className="cursor-pointer ">
           {loading ? "Sending..." : "Start planning my trip"}
         </Button>
-      </div>
+      </form>
     </motion.div>
   );
 }

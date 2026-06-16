@@ -17,7 +17,7 @@ const CTATeamJoin = () => {
           Join Our Concierge Team
         </motion.h2>
         <motion.div className="">
-          <h3 className="text-lg md:text-3xl  mb-4">
+          <h3 className="font-semibold text-base md:text-3xl  mb-4">
             Are you passionate about French Polynesia?
           </h3>
           <p>

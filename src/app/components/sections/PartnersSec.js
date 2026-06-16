@@ -13,7 +13,7 @@ const partners = [
 
 const PartnersSec = () => {
   return (
-    <section className="py-10 md:py-16">
+    <section className="py-10 md:py-16 overflow-hidden">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,13 @@ const PartnersSec = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center items-center gap-6 md:gap-10"
+          className="w-full                  
+            flex overflow-x-auto snap-x snap-mandatory pl-5 md:pl-0
+            md:flex-wrap
+            md:justify-center
+            md:overflow-x-hidden         
+            gap-6 md:gap-10
+            scrollbar-hide  "
         >
           {partners.map((partner, index) => (
             <motion.div
@@ -39,12 +45,18 @@ const PartnersSec = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex items-center justify-center"
+              className="min-w-[200px]  
+flex-shrink-0
+          snap-center
+          flex
+          items-center
+          justify-center
+          md:min-w-fit"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-16 w-36 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="w-[180px] h-[100px]  md:h-full md:w-36 object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
             </motion.div>
           ))}

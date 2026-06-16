@@ -14,13 +14,13 @@ export default function WhyUs({
     <section className="relative py-10 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
         {/* LEFT: Text — full width on mobile, half on desktop */}
-        <div className="w-full md:w-1/2 md:pr-10">
+        <div className="w-full md:w-1/2 md:pr-10 text-center md:text-left">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0, duration: 0.8 }}
-            className="text-3xl md:text-5xl font-bold mb-4"
+            className="text-2xl md:text-5xl font-bold mb-4"
           >
             Welcome to <br /> French Polynesia
           </motion.h2>
@@ -29,7 +29,7 @@ export default function WhyUs({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl mb-4 text-gray-500"
+            className="text-lg mb-4 text-gray-500"
           >
             {subheading}
           </motion.h3>
@@ -38,7 +38,7 @@ export default function WhyUs({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-sm md:text-base text-gray-500 mb-4 md:mb-6"
+            className="text-base text-gray-500 mb-4 md:mb-6"
           >
             {paragraph}
           </motion.p>
@@ -59,7 +59,7 @@ export default function WhyUs({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="hidden md:flex w-1/2 shrink-0 h-[520px] gap-3"
+          className={`${imageLayout === "single" ? "" : "hidden"} md:flex md:w-1/2 shrink-0 h-full md:h-[500px] gap-3`}
         >
           {imageLayout === "single" ? (
             // ─── Single Image ───
