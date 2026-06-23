@@ -58,7 +58,7 @@ const SpecialistModal = ({ specialist, onClose }) => {
           className="px-6  pb-8 pt-5 md:pt-6 flex flex-col justify-start gap-3 w-full md:w-[50%] gap-3 md:h-auto md:overflow-y-auto
  "
         >
-          {/* ✅ Desktop: Close Button — content ke andar top right */}
+          {/* Desktop: Close Button — content ke andar top right */}
           <div
             className="hidden md:flex items-center justify-between cursor-pointer"
             onClick={onClose}
@@ -79,8 +79,14 @@ const SpecialistModal = ({ specialist, onClose }) => {
             "{specialist.quote}"
           </p>
 
-          <p className="text-[#666666] text-base leading-relaxed mt-2">
-            {specialist.contact}
+          <p>
+            For contact please send email to <br />
+            <a
+              href={`mailto:${specialist.email}`}
+              className="text-gray-600 underline"
+            >
+              {specialist.email}
+            </a>
           </p>
         </div>
       </div>

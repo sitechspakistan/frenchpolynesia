@@ -13,7 +13,7 @@ const destinations = [
     //   "May to October — ideal weather with low humidity and refreshing breezes.",
     perfectFor:
       "Culture seekers, foodies, and travelers wanting authentic Polynesian life.",
-    image: "/assets/images/destinations/fp-tahiti.jpg",
+    image: "/assets/images/destinations/tahiti.jpg",
     imageAlt: "Bora Bora lagoon and overwater bungalows",
     imagePosition: "left",
   },
@@ -40,7 +40,7 @@ const destinations = [
     // bestTime:
     //   "May to October - dry season with clear skies and calm lagoon waters.",
     perfectFor: "Honeymooners, luxury travelers, and water sports enthusiasts.",
-    image: "/assets/images/destinations/fp-bora.jpg",
+    image: "/assets/images/destinations/bora-bora.jpg",
     imageAlt: "Bora Bora lagoon and overwater bungalows",
     imagePosition: "left",
   },

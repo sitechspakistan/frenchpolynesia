@@ -19,7 +19,7 @@ const aboutUs = () => {
       <HeroSecond heading={"About Us"} />
       <WhyUs
         subheading="Certified Tahiti Specialist"
-        imageLayout="single"
+        imageLayout="two-column"
         singleImage="/assets/certificate/certificate.png"
       />
       <CTATeamJoin />

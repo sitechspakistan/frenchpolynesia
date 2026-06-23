@@ -24,15 +24,16 @@ const ContactInfo = () => {
         </div>
         <div className="flex-1">
           <h3 className="text-xl md:text-2xl font-bold  md:mb-5">
-            Contact <br className="hidden md:block" /> With Us
+            Contact <br className="hidden md:block" />
+            Us
           </h3>
-          <p>+412-458-9665</p>
+          <p>+631-885-2014</p>
         </div>
         <div className="flex-1">
           <h3 className="text-xl md:text-2xl font-bold  md:mb-5">
             Our <br className="hidden md:block" /> Email
           </h3>
-          <p>frenchpolynesia@email.com</p>
+          <p>info@travelistatravels.com</p>
         </div>
       </div>
       <div className="h-[1px] bg-black my-8"></div>

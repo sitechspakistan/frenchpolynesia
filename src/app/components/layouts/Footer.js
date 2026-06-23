@@ -172,11 +172,11 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <p className="text-sm text-gray-700">
                 <span className="font-bold text-gray-900">Phone : </span>
-                412-458-9665
+                631-885-2014
               </p>
               <p className="text-sm text-gray-700">
                 <span className="font-bold text-gray-900">Email : </span>
-                frenchpolynesia@email.com
+                info@travelistatravels.com
               </p>
               <p className="text-sm text-gray-700">
                 <span className="font-bold text-gray-900">Address : </span>

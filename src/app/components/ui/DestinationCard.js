@@ -23,7 +23,7 @@ export default function DestinationCard({
       <div className="flex  items-center justify-between mt-4 px-1">
         {/* Category & Date */}
         <div>
-          <p className="text-sm text-gray-400">{date}</p>
+          {/* <p className="text-sm text-gray-400">{date}</p> */}
           <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide line-clamp-2">
             {title}
           </h3>

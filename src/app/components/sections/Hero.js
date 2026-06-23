@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       className="relative flex items-end h-[400px] md:h-[100vh] bg-cover bg-no-repeat bg-center"
-      style={{ backgroundImage: "url('/assets/images/fp-hero-image.jpg')" }}
+      style={{ backgroundImage: "url('/assets/images/hero-image-1.jpg')" }}
     >
       {/* <div className="absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-white/90 to-transparent" /> */}
 
