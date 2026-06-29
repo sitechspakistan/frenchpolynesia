@@ -7,6 +7,7 @@ import AboutSec from "../components/ui/AboutSec";
 import FeaturesSec from "../components/sections/FeaturesSec";
 import CTATeamJoin from "../components/sections/CTATeamJoin";
 import PartnersSec from "../components/sections/PartnersSec";
+import WhyBookWithUs from "../components/sections/WhyBookWithUs";
 
 export const metadata = {
   title: "About Us | French Polynesia",
@@ -22,6 +23,7 @@ const aboutUs = () => {
         imageLayout="two-column"
         singleImage="/assets/certificate/certificate.png"
       />
+      <WhyBookWithUs />
       <CTATeamJoin />
       <PartnersSec />
       <FeaturesSec />

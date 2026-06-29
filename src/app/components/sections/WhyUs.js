@@ -22,7 +22,11 @@ export default function WhyUs({
             transition={{ delay: 0, duration: 0.8 }}
             className="text-2xl md:text-5xl font-bold mb-4"
           >
-            Welcome to <br /> French Polynesia
+            Welcome to{" "}
+            <span className="text-(--primary)">
+              The
+              <br /> French Polynesia{" "}
+            </span>
           </motion.h2>
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
