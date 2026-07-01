@@ -14,13 +14,13 @@ const WhyBookWithUs = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* ── Main Heading Block ── */}
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-sm font-bold tracking-widest uppercase text-(--primary) mb-3">
+          <h2 className="text-lg md:text-2xl font-bold tracking-widest uppercase text-(--primary) mb-3">
             Why Book With Us
-          </p>
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 leading-tight mb-6 max-w-7xl mx-auto">
+          </h2>
+          <h3 className="text-base md:text-4xl font-bold text-gray-900 leading-tight mb-6 max-w-3xl mx-auto">
             Why Book Your Tahitian Islands Vacation with The French Polynesia
             Concierge Team?
-          </h2>
+          </h3>
           <div className="max-w-5xl mx-auto space-y-4 text-gray-600 text-base leading-relaxed">
             <p>
               French Polynesia is one of the most breathtaking destinations in

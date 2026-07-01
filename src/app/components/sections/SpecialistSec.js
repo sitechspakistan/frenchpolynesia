@@ -18,9 +18,15 @@ const members = [
     name: "Stephanie Welsh",
     specialization: "Tahitian Islands Specialist & Concierge",
     image: "/assets/specialist/stephanie.png",
-    quote: `Stephanie fell in love with French Polynesia during her honeymoon and has been passionate about the islands ever since. Inspired by their breathtaking beauty, warm culture, and unforgettable experiences, she is dedicated to helping others discover the magic of destinations like Bora Bora, Moorea, and beyond. As a Tahitian Islands Specialist & Concierge, Stephanie creates personalized journeys designed to turn dream vacations into lifelong memories.
-`,
+    quote: `Stephanie fell in love with French Polynesia during her honeymoon and has been passionate about the islands ever since. Inspired by their breathtaking beauty, warm culture, and unforgettable experiences, she is dedicated to helping others discover the magic of destinations like Bora Bora, Moorea, and beyond. As a Tahitian Islands Specialist & Concierge, Stephanie creates personalized journeys designed to turn dream vacations into lifelong memories.`,
     email: "swelsh@travelistatravels.com",
+  },
+  {
+    name: "Kat Major",
+    specialization: "Tahitian Islands Specialist & Concierge",
+    image: "/assets/specialist/kat.webp",
+    quote: `With over 15 years of experience in luxury hospitality, Kat Major brings an unmatched level of intuitive service to her role as a premier Tahitian Island Specialist and Concierge. Certified by Tahiti’s official tourism board, she crafts bespoke itineraries that seamlessly blend upscale, elegant comfort with deep cultural immersion and authentic island adventure. Beyond land-based luxury, Kat Major specializes in curated small-ship voyages, partnering with elite cruise lines like Paul Gauguin, Silversea, Windstar, and Variety to find the perfect fit for every traveler. Known for her professional yet warm, down-to-earth approach, she ensures every client experiences the absolute best of French Polynesia.`,
+    email: "kmajor@travelistatravels.com",
   },
 ];
 
