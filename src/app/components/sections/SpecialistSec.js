@@ -17,7 +17,7 @@ const members = [
   {
     name: "Stephanie Welsh",
     specialization: "Tahitian Islands Specialist & Concierge",
-    image: "/assets/specialist/stephanie.png",
+    image: "/assets/specialist/stephanie.jpg",
     quote: `Stephanie fell in love with French Polynesia during her honeymoon and has been passionate about the islands ever since. Inspired by their breathtaking beauty, warm culture, and unforgettable experiences, she is dedicated to helping others discover the magic of destinations like Bora Bora, Moorea, and beyond. As a Tahitian Islands Specialist & Concierge, Stephanie creates personalized journeys designed to turn dream vacations into lifelong memories.`,
     email: "swelsh@travelistatravels.com",
   },
