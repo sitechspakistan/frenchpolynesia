@@ -18,7 +18,7 @@ const WhyBookWithUs = () => {
             Why Book With Us
           </h2>
           <h3 className="text-base md:text-4xl font-bold text-gray-900 leading-tight mb-6 max-w-3xl mx-auto">
-            Why Book Your Tahitian Islands Vacation with The French Polynesia
+            Why Book Your Tahitian Islands Vacation with <span className="text-(--primary)">The French Polynesia </span>
             Concierge Team?
           </h3>
           <div className="max-w-5xl mx-auto space-y-4 text-gray-600 text-base leading-relaxed">

@@ -18,7 +18,7 @@ const CTATeamJoin = () => {
         </motion.h2>
         <motion.div className="">
           <h3 className="font-semibold text-base md:text-3xl  mb-4">
-            Are you passionate about French Polynesia?
+            Are you passionate about <span className="text-(--primary)">The French Polynesia</span>?
           </h3>
           <p>
             The French Polynesia Concierge is growing, and we're looking for
