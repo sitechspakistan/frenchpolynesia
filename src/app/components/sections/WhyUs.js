@@ -24,8 +24,7 @@ export default function WhyUs({
           >
             Welcome to{" "}
             <span className="text-(--primary)">
-              The
-              <br /> French Polynesia{" "}
+            <br />The French Polynesia{" "}
             </span>
           </motion.h2>
           <motion.h3

@@ -10,7 +10,7 @@ const PromoSec = () => {
           <>
             <h2 className="text-2xl md:text-4xl pb-6 md:pb-1 capitalize">
               Why Book with{" "}
-              <span className="text-pink-500"> The French Polynesia </span>
+              <span className="text-pink-500"> <br /> The French Polynesia </span>
               Concierge Team?
             </h2>
           </>
