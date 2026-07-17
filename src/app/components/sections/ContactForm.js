@@ -5,27 +5,50 @@ import Button from "../ui/Button";
 import ContactTextarea from "../ui/ContactTextArea";
 import { motion } from "framer-motion";
 
-// const reasonOptions = [
-//   { value: "booking", label: "Booking Enquiry" },
-//   { value: "experience", label: "Experience Enquiry" },
-//   { value: "general", label: "General Question" },
-//   { value: "complaint", label: "Complaint" },
-//   { value: "other", label: "Other" },
-// ];
-
 export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
-    reason: "",
     email: "",
     phone: "",
     description: "",
-    gdpr: false,
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("formData:", formData);
+
+    try {
+      setLoading(true);
+      setStatus("");
+
+      const response = await fetch("/api/contact-us", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to submit form");
+      }
+
+      setStatus("Form submitted successfully!");
+
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        description: "",
+      });
+    } catch (error) {
+      setStatus(error.message || "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -46,35 +69,48 @@ export default function ContactForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className=" flex flex-col gap-4 "
+          onSubmit={handleSubmit}
         >
           <ContactInput
+            required
             type="text"
             name="fullName"
             placeholder="Full Name"
-            // value={formData.fullName}
-            // onChange={handleChange}
+            value={formData.fullName}
+            onChange={(e) =>
+              setFormData({ ...formData, fullName: e.target.value })
+            }
           />
 
           <ContactInput
+            required
             type="email"
             name="email"
             placeholder="Email Address"
-            // value={formData.email}
-            // onChange={handleChange}
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
           />
 
           <ContactInput
+            required
             type="tel"
             name="phone"
             placeholder="Phone Number"
-            // value={formData.phone}
-            // onChange={handleChange}
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
           />
           <ContactTextarea
+            required
             name="description"
             placeholder="Description"
-            // value={formData.description}
-            // onChange={handleChange}
+            value={formData.description}
+            onChange={(e) =>
+              setFormData({ ...formData, description: e.target.value })
+            }
           />
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -86,8 +122,25 @@ export default function ContactForm() {
             }}
             className="self-center md:self-start"
           >
-            <Button className="w-full md:w-[100%] mt-4">Submit now</Button>
+            <Button
+              type="submit"
+              className="w-full md:w-[100%] mt-4"
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Submit now"}
+            </Button>
           </motion.div>
+          {status && (
+            <p
+              className={`mt-3 text-sm ${
+                status.includes("successfully")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
+              {status}
+            </p>
+          )}
         </motion.form>
       </div>
     </>

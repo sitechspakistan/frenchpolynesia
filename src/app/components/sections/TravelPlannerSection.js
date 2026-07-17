@@ -4,6 +4,8 @@ import Button from "../ui/Button";
 import { motion } from "framer-motion";
 import DateRange from "../ui/DateRange";
 import { useState } from "react";
+import ContactInput from "../ui/ContactInput";
+import ContactTextarea from "../ui/ContactTextArea";
 
 export default function TravelPlannerSection({
   backgroundImage = "/assets/travel/hero-bg.jpg",
@@ -93,7 +95,7 @@ export default function TravelPlannerSection({
             <label className="text-sm font-semibold ">
               Name of passengers <span className="text-(--primary)">*</span>
             </label>
-            <input
+            <ContactInput
               required
               type="text"
               placeholder="e.g. John Doe, Jane Doe"
@@ -101,7 +103,6 @@ export default function TravelPlannerSection({
               onChange={(e) =>
                 setFormData({ ...formData, nameOfPassengers: e.target.value })
               }
-              className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -130,9 +131,11 @@ export default function TravelPlannerSection({
             onChange={(e) =>
               setFormData({ ...formData, island: e.target.value })
             }
-            className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-500 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
+            className="bg-(--section-bg) border border-gray-200 rounded-lg px-3 py-4 text-sm text-gray-500 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
           >
-            <option value="">Select or type islands</option>
+            <option value="" className="pr-3">
+              Select or type islands
+            </option>
             {["Tahiti", "Moorea", "Bora Bora", "Taha'a", "Raiatea"].map((i) => (
               <option key={i}>{i}</option>
             ))}
@@ -144,7 +147,7 @@ export default function TravelPlannerSection({
             Budget range (USD) <span className="text-(--primary)">*</span>
           </label>
           <div className="relative">
-            <input
+            <ContactInput
               required
               type="text"
               placeholder="e.g. $2,000 - $5,000"
@@ -152,7 +155,6 @@ export default function TravelPlannerSection({
               onChange={(e) =>
                 setFormData({ ...formData, budget: e.target.value })
               }
-              className="w-full border border-gray-200 rounded-lg px-3 py-2.5 pr-8 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition"
             />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">
               $
@@ -162,20 +164,30 @@ export default function TravelPlannerSection({
 
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-semibold ">Additional notes</label>
-          <textarea
+          <ContactTextarea
             value={formData.additionalNotes}
             onChange={(e) =>
               setFormData({ ...formData, additionalNotes: e.target.value })
             }
             rows={3}
             placeholder="Tell us more about your travel plans..."
-            className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition resize-none"
           />
         </div>
 
         <Button type="submit" disabled={loading} className="cursor-pointer ">
           {loading ? "Sending..." : "Start planning my trip"}
         </Button>
+        {status && (
+          <p
+            className={`mt-3 text-sm ${
+              status.includes("successfully")
+                ? "text-green-600"
+                : "text-red-600"
+            }`}
+          >
+            {status}
+          </p>
+        )}
       </form>
     </motion.div>
   );

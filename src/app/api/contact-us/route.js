@@ -5,15 +5,18 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
+    const { fullName, email, phone, description } = body;
+    if (!fullName || !email || !description) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Please fill in all required fields.",
+        },
+        { status: 400 },
+      );
+    }
+
     console.log("FORM DATA:", body);
-
-    const startDate = body.travelDates?.start
-      ? `${body.travelDates.start.month}/${body.travelDates.start.day}/${body.travelDates.start.year}`
-      : "-";
-
-    const endDate = body.travelDates?.end
-      ? `${body.travelDates.end.month}/${body.travelDates.end.day}/${body.travelDates.end.year}`
-      : "-";
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -24,23 +27,22 @@ export async function POST(req) {
         pass: process.env.SMTP_PASSWORD,
       },
     });
+
     await transporter.sendMail({
       from: process.env.MAIL_FROM,
-      to: process.env.QUOTE_FORM_TO,
-      subject: "New Travel Planner Submission",
+      to: process.env.CONTACT_FORM_TO,
+      subject: "New Contact Form Submission",
       html: `
-        <h2>Travel Planner Form</h2>
+        <h2>Contact Us Form</h2>
 
-        <p><strong>Passengers:</strong> ${body.nameOfPassengers}</p>
+        <p><strong>Full Name:</strong> ${fullName}</p>
 
-        <p><strong>Travel Dates:</strong> ${startDate} - ${endDate}</p>
+        <p><strong>Email:</strong> ${email}</p>
 
-        <p><strong>Island:</strong> ${body.island}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
 
-        <p><strong>Budget:</strong> ${body.budget}</p>
+        <p><strong>Description:</strong> ${description}</p>
 
-        <p><strong>Notes:</strong></p>
-        <p>${body.additionalNotes}</p>
       `,
     });
 

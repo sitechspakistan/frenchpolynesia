@@ -39,7 +39,7 @@ const DateRange = ({ value, onChange }) => {
       <button
         ref={triggerRef}
         onClick={() => setIsOpen((prev) => !prev)}
-        className={`border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition w-full text-left flex items-center justify-between ${
+        className={`bg-(--section-bg) border border-gray-200 rounded-sm px-3 py-3.5 text-sm placeholder-gray-300 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition w-full text-left flex items-center justify-between ${
           value?.start ? "text-gray-800" : "text-gray-400"
         }`}
       >
